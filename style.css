@@ -445,3 +445,18 @@ body {
     font-size: 0.85em;
   }
 }
+
+/* Make the 3-column section at the bottom look like cards */
+.three-column-section .col-md-4 {
+  background: #f8fafc; /* Light background for card */
+  border: 1.5px solid #e0e6ed; /* Light border */
+  padding: 32px 20px 28px 20px; /* Space inside card */
+  margin-bottom: 28px; /* Space below each card */
+  margin-top: 12px;    /* Space above each card */
+  text-align: center;  /* Center text in card */
+}
+
+/* Make all h2 bold for better visibility, especially on small screens */
+h2 {
+  font-weight: bold;
+}
