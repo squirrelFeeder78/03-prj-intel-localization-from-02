@@ -7,29 +7,70 @@ body {
   padding: 0; /* Ensure no padding at top */
 }
 
-/* Hero section with blue gradient, large size, bottom-left text */
+/* Hero section with bold, creative background and large content */
 .hero {
-  background: linear-gradient(135deg, #0068b5 0%, #00aee6 100%);
+  /* Use a dramatic blue gradient with a glowing radial highlight */
+  background:
+    radial-gradient(circle at 60% 40%, rgba(0,174,230,0.35) 0%, transparent 60%),
+    linear-gradient(120deg, #003057 0%, #0068b5 60%, #00aee6 100%);
   color: #fff;
-  min-height: 60vh;
+  min-height: 60vh; /* Make hero much taller */
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-  text-align: left;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  text-align: center;
   padding: 0;
-  width: 100%; /* Changed from 100vw to 100% */
+  width: 100%;
   box-sizing: border-box;
   margin: 0;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero-content {
-  max-width: 600px;
-  margin: 0 0 60px 80px;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  background: none;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Add more space between elements */
+  gap: 36px;
 }
 
 .hero-logo {
-  width: 120px;
-  margin-bottom: 16px;
+  width: 200px;
+  margin-bottom: 0; /* Remove margin, spacing is handled by gap */
+  filter: drop-shadow(0 8px 32px rgba(0, 110, 181, 0.22));
+}
+
+.hero-content h1 {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 3.6em; /* Larger heading */
+  font-weight: bold;
+  margin: 0;
+  letter-spacing: 2px;
+  text-shadow: 0 4px 24px rgba(0, 48, 87, 0.18);
+  color: #fff;
+  line-height: 1.15;
+  /* Allow the heading to wrap onto multiple lines */
+  white-space: normal;
+  overflow-x: visible;
+  text-transform: uppercase; /* Make all letters uppercase */
+}
+
+.hero-content p {
+  font-size: 1.7em; /* Larger subheading */
+  margin: 0;
+  color: #e6f4fa;
+  text-shadow: 0 2px 12px rgba(0, 48, 87, 0.15);
+  max-width: 700px;
+  line-height: 1.6; /* More space between lines */
 }
 
 /* Navigation bar styles */
@@ -298,6 +339,26 @@ body {
     width: 100vw; /* Ensure full width on small screens */
     min-width: 0;
   }
+  .hero {
+    min-height: 60vh;
+    padding: 0;
+  }
+  .hero-content {
+    max-width: 98vw;
+    padding: 0;
+    gap: 16px;
+  }
+  .hero-logo {
+    width: 90px;
+  }
+  .hero-content h1 {
+    font-size: 1.5em;
+    white-space: normal; /* Allow wrapping on small screens */
+    overflow-x: visible;
+  }
+  .hero-content p {
+    font-size: 1.1em;
+  }
   .timeline {
     flex-direction: column;
     align-items: center;
@@ -328,6 +389,23 @@ body {
   .hero-content {
     margin: 0 0 32px 16px;
     padding: 0 8px;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-content h1 {
+    font-size: 2.4em;
+    white-space: normal; /* Allow wrapping on medium screens */
+    overflow-x: visible;
+  }
+  .hero-logo {
+    width: 120px;
+  }
+  .hero-content p {
+    font-size: 1.2em;
+  }
+  .hero-content {
+    gap: 22px;
   }
 }
 
