@@ -264,7 +264,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
 }
 
 .card-image-container:hover .card-description {
@@ -453,7 +452,6 @@ body {
   padding: 32px 20px 28px 20px; /* Space inside card */
   margin-bottom: 28px; /* Space below each card */
   margin-top: 12px;    /* Space above each card */
-  text-align: center;  /* Center text in card */
 }
 
 /* Make all h2 bold for better visibility, especially on small screens */
